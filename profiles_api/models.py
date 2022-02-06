@@ -61,7 +61,7 @@ class ProfileFeedItem(models.Model):
 		on_delete= models.CASCADE
 	)
 	status_text = models.CharField(max_length=255)
-	craeted_on = models.DateTimeField(auto_now_add=True)
+	created_on = models.DateTimeField(auto_now_add=True)
 
 
 	def __str__(self):

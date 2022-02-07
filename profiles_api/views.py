@@ -37,7 +37,7 @@ class UserProfileFeedViewSet(viewsets.ModelViewSet):
 	serializer_class = serializers.ProfileFeedItemSerializer
 	queryset = models.ProfileFeedItem.objects.all()
 	authentication_classes = (TokenAuthentication,)
-	permission_classes = (permissions.UpdateOwnPermissions, IsAuthenticatedOrReadOnly)
+	permission_classes = (permissions.UpdateOwnStatus, IsAuthenticatedOrReadOnly)
 
 
 	def perform_create(self,serializer):

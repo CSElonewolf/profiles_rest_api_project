@@ -11,7 +11,6 @@ class UpdateOwnPermissions(permissions.BasePermission):
 		# if the authenticated user is not same as the user editing
 		return obj.id == request.user.id
 
-
 class UpdateOwnStatus(permissions.BasePermission):
 	"""Allow users to update their own status"""
 
@@ -19,4 +18,4 @@ class UpdateOwnStatus(permissions.BasePermission):
 		"""Check the user is trying to update their own status """
 		if request.method in permissions.SAFE_METHODS:
 			return True
-		return obj.user_profile.id == request.user.id 
+		return obj.user_profile.id == request.user.id
